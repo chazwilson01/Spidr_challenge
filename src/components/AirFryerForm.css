@@ -250,6 +250,8 @@
   display: flex;
   align-items: center;
   width: 100%;
+  animation: fadeInUp 0.4s ease-out;
+  animation-fill-mode: both;
 }
 
 .pin-toggle {
