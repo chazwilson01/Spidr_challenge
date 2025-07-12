@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Spidr Air Fryer Interest Form
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based interest form for Spidr Design's fictional air fryer product. This form is designed to be embedded at the bottom of a landing page and matches Spidr Design's clean, professional aesthetic.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Clean, Professional Design**: Matches Spidr Design's monochromatic style guide
+- **Responsive Layout**: Works seamlessly on desktop and mobile devices
+- **Form Validation**: Built-in HTML5 validation for all required fields
+- **Special PIN Formatting**: Automatically formats the 16-digit Spidr PIN with dashes
+- **Console Output**: Form data is logged to the browser console on submission
 
-### `npm start`
+## Form Fields
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **First Name** (required)
+2. **Last Name** (required)
+3. **Phone Number** (required)
+4. **Email Address** (required)
+5. **Cost Guess** (required) - Dollar amount input with currency symbol
+6. **Secret 16-Digit Spidr PIN** (required) - Auto-formatted as ####-####-####-####
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Design System
 
-### `npm test`
+This form follows Spidr Design's style guide:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Colors**: Clean white background (#FFFFFF) with charcoal text (#222222)
+- **Typography**: Sans-serif fonts with uppercase labels and proper hierarchy
+- **Spacing**: Generous whitespace with 40-60px vertical spacing
+- **Components**: Simple rectangular inputs and buttons with subtle hover effects
+- **Layout**: Responsive grid system with left-aligned content
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (version 14 or higher)
+- npm or yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd spidr-air-fryer-form
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies:
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start the development server:
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The application will open at `http://localhost:3000`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Building for Production
 
-## Learn More
+To create a production build:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This creates a `build` folder with optimized files ready for deployment.
 
-### Code Splitting
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The built application can be deployed to any static hosting service:
 
-### Analyzing the Bundle Size
+- **GitHub Pages**: Use `gh-pages` package
+- **Netlify**: Drag and drop the `build` folder
+- **Vercel**: Connect your GitHub repository
+- **AWS S3**: Upload the `build` folder to a public bucket
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Project Structure
 
-### Making a Progressive Web App
+```
+src/
+├── components/
+│   ├── AirFryerForm.js    # Main form component
+│   └── AirFryerForm.css   # Form styling
+├── App.js                 # Root component
+├── App.css               # Global styles
+└── index.js              # Application entry point
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Technologies Used
 
-### Advanced Configuration
+- **React 19.1.0** - Frontend framework
+- **CSS3** - Styling with custom properties and animations
+- **HTML5** - Semantic markup and form validation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Browser Support
 
-### Deployment
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is created for the Spidr Design coding challenge.
