@@ -245,11 +245,39 @@
   padding-left: 36px;
 }
 
+.pin-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.pin-toggle {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.pin-toggle:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .pin-input {
   font-family: 'Courier New', monospace;
   letter-spacing: 2px;
   font-weight: 500;
   font-size: 14px;
+  padding-right: 50px;
+  width: 100%;
 }
 
 .submit-button {

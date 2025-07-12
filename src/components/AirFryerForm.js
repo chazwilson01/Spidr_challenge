@@ -11,6 +11,8 @@ const AirFryerForm = () => {
     spidrPin: ''
   });
 
+  const [showPin, setShowPin] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     
@@ -28,6 +30,10 @@ const AirFryerForm = () => {
         [name]: value
       }));
     }
+  };
+
+  const togglePinVisibility = () => {
+    setShowPin(!showPin);
   };
 
   const handleSubmit = (e) => {
@@ -122,17 +128,27 @@ const AirFryerForm = () => {
 
           <div className="form-group">
             <label htmlFor="spidrPin">SECRET 16-DIGIT SPIDR PIN</label>
-            <input
-              type="text"
-              id="spidrPin"
-              name="spidrPin"
-              value={formData.spidrPin}
-              onChange={handleInputChange}
-              required
-              className="form-input pin-input"
-              placeholder="####-####-####-####"
-              maxLength="19"
-            />
+            <div className="pin-input-wrapper">
+              <input
+                type={showPin ? "text" : "password"}
+                id="spidrPin"
+                name="spidrPin"
+                value={formData.spidrPin}
+                onChange={handleInputChange}
+                required
+                className="form-input pin-input"
+                placeholder="####-####-####-####"
+                maxLength="19"
+              />
+              <button
+                type="button"
+                className="pin-toggle"
+                onClick={togglePinVisibility}
+                aria-label={showPin ? "Hide PIN" : "Show PIN"}
+              >
+                {showPin ? "👁️" : "👁️‍🗨️"}
+              </button>
+            </div>
           </div>
 
           <button type="submit" className="submit-button">
