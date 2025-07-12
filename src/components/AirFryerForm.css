@@ -14,6 +14,7 @@
   border-radius: 12px;
   padding: 60px 40px;
   max-width: 600px;
+  min-width: 320px;
   width: 100%;
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.3),
@@ -132,6 +133,7 @@
   
   .form-wrapper {
     padding: 40px 20px;
+    min-width: 280px;
   }
   
   .form-title {
@@ -346,6 +348,7 @@
   
   .form-wrapper {
     padding: 30px 20px;
+    min-width: 260px;
   }
   
   .form-title {
